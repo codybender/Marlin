@@ -926,7 +926,7 @@
  */
 #define DEFAULT_AXIS_STEPS_PER_UNIT
 {
-  80, 80, 400, 865
+  80, 80, 400, 389
 }
 
 /**
@@ -2075,10 +2075,10 @@
 #define PASSWORD_LENGTH 4 // (#) Number of digits (1-9). 3 or 4 is recommended
 #define PASSWORD_ON_STARTUP
 #define PASSWORD_UNLOCK_GCODE // Unlock with the M511 P<password> command. Disable to prevent brute-force attack.
-#define PASSWORD_CHANGE_GCODE // Change the password with M512 P<old> S<new>.
-                              //#define PASSWORD_ON_SD_PRINT_MENU       // This does not prevent gcodes from running
-                              //#define PASSWORD_AFTER_SD_PRINT_END
-                              //#define PASSWORD_AFTER_SD_PRINT_ABORT
+#define PASSWORD_CHANGE_GCODE // Change the password with M512 P<old> S<new>.                                        \
+                              //#define PASSWORD_ON_SD_PRINT_MENU       // This does not prevent gcodes from running \
+                              //#define PASSWORD_AFTER_SD_PRINT_END                                                  \
+                              //#define PASSWORD_AFTER_SD_PRINT_ABORT                                                \
                               //#include "Configuration_Secure.h"       // External file with PASSWORD_DEFAULT_VALUE
 #endif
 
@@ -2614,7 +2614,7 @@
 //#define ANYCUBIC_LCD_I3MEGA
 //#define ANYCUBIC_LCD_CHIRON
 #if EITHER(ANYCUBIC_LCD_I3MEGA, ANYCUBIC_LCD_CHIRON)
-#define LCD_SERIAL_PORT 3 // Default is 3 for Anycubic
+#define LCD_SERIAL_PORT 3 // Default is 3 for Anycubic \
                           //#define ANYCUBIC_LCD_DEBUG
 #endif
 
