@@ -826,19 +826,19 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define Y_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define I_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define J_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define K_MIN_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define I_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define J_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define K_MAX_ENDSTOP_INVERTING false      // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
+#define X_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define I_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define J_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define K_MIN_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define I_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define J_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define K_MAX_ENDSTOP_INVERTING false       // Set to true to invert the logic of the endstop.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -924,10 +924,10 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT
-{
-  80, 80, 400, 389
-}
+#define DEFAULT_AXIS_STEPS_PER_UNIT \
+  {                                 \
+    80, 80, 400, 389                \
+  }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1029,7 +1029,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-#define S_CURVE_ACCELERATION
+//#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1209,7 +1209,7 @@
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_FEEDRATE_FAST (4 * 60)
 
-#define MIN_PROBE_EDGE 5
+#define PROBING_MARGIN 5
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
@@ -1397,7 +1397,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 200
+#define Z_MAX_POS 235
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
